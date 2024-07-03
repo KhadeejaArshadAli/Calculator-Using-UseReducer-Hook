@@ -1,0 +1,52 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/017/667/046/original/cool-groovy-liquid-background-design-trendy-y2k-background-texture-funky-retro-wallpaper-vector.jpg");
+
+}
+.calculator-grid{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(4 , 6rem);
+    grid-template-rows: minmax(7rem , auto) repeat(5 , 6rem);
+    justify-content: center;
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+    background-color:rgba(233, 213, 235, 0.75);
+
+}
+.calculator-grid > button:hover,
+.calculator-grid > button:focus{
+    background-color: rgba(226, 164, 223, 0.98);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(113, 208, 239, .75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+.output .previous-operand{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+.output .current-operand{
+   
+    color: white;
+    font-size: 2.5rem;
+}
